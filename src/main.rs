@@ -1,3 +1,14 @@
+mod aoc;
+
+use aoc::utils;
+
 fn main() {
-    println!("Hello, world!");
+    // parse day number from cli input
+    let day: u8 = utils::parse_cli_day();
+
+    // day selection
+    match day {
+        1 => aoc::day_01::part_1(),
+        _ => println!("Unknown day number: {day}."),
+    }
 }
